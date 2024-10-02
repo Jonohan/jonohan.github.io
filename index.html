@@ -38,9 +38,9 @@
       max-width: 300px; /* Ensures images have the same width */
       height: auto;
     }
-    imgWid {
+    .img-wide {
       width: 100%;
-      max-width: 500px; /* Ensures images have the same width */
+      max-width: 500px; /* Sets specific images to a width of 500px */
       height: auto;
     }
     p {
@@ -50,9 +50,10 @@
       word-wrap: break-word; /* Ensures text breaks properly to fit within the image width */
       text-align: center;
     }
-    pwid {
+    .p-wide {
       color: gray;
       width: 100%;
+      max-width: 500px; /* Text width matches the wider image */
       word-wrap: break-word;
       text-align: center;
     }
@@ -76,26 +77,21 @@
 
   <div class="about-me">
     <h1>Haohan Wang</h1>
-    <pwid>A computer science master student,</pwid>
-    <pwid>indie game developer,</pwid>
-    <pwid>and a gamer.</pwid>
+    <p>A computer science master student, indie game developer, and a gamer.</p>
   </div>
-  <div class="container">
-    <!-- About Me Section -->
 
+  <div class="container">
     <!-- First Column: Indie Game Development -->
     <div class="project-column">
       <h1>Indie Game Development</h1>
 
       <h2>Monster GO</h2>
-      <imgWid src="image/monstergo.gif" alt="monstergo GIF">
-      <pwid>Strategic Stealth Game: Play a monster and escape!</pwid>
+      <img class="img-wide" src="image/monstergo.gif" alt="Monster GO GIF">
+      <p class="p-wide">Strategic Stealth Game: Play a monster and escape!</p>
 
       <h2>Santa VS Demon</h2>
-      <imgWid src="image/monstergo.gif" alt="monstergo GIF">
-      <pwid>Two-player Game: Paint the ground, beat your friend!</pwid>
-
-      <!-- Add more projects in the same format -->
+      <img class="img-wide" src="image/SVSD.gif" alt="SVSD GIF">
+      <p class="p-wide">Two-player Game: Paint the ground, beat your friend!</p>
     </div>
 
     <!-- Second Column: Computer Animation(OpenGL) -->
@@ -120,16 +116,12 @@
       <h1>Game Engine Development (C++)</h1>
 
       <h2>Frustum Culling</h2>
-      <img src="image/frustum.gif" alt="frustum GIF">
-      <p>Creating AABB for every instance, and culling those outside the screen</p>
-
-      <!-- Add more projects in the same format -->
+      <img src="image/frustum.gif" alt="Frustum GIF">
+      <p>Creating AABB for every instance, and culling those outside the screen.</p>
     </div>
 
   </div>
 </body>
 </html>
-
-
 
 
