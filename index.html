@@ -12,16 +12,24 @@
       padding: 0;
       overflow-x: auto; /* Enables horizontal scrolling */
     }
+
+    html, body {
+      height: 100%; /* Ensure body takes the full height of the screen */
+      margin: 0;
+      overflow-x: auto; /* Allows horizontal scrolling */
+    }
+    
     .container {
-      display: flex; /* Flexbox layout to align columns side by side */
+      display: flex;
       flex-direction: row;
-      max-width: 100%;
+      min-width: 100vw; /* Ensure container is full-width */
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       overflow-x: auto; /* Allows horizontal scrolling if content overflows */
     }
+
     .project-column {
       display: flex;
       flex-direction: column;
