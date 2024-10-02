@@ -7,11 +7,10 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      overflow-x: auto;
     }
     .container {
       max-width: 100%;
@@ -21,50 +20,62 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .projects {
+    .project-column {
       display: flex;
-      overflow-x: auto;
-      padding: 20px;
-    }
-    .project-item {
-      min-width: 300px;
-      margin-right: 20px;
-      flex-shrink: 0;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
     }
     img {
       width: 100%;
-      max-width: 300px;
+      max-width: 300px; /* Ensures images have the same width */
       height: auto;
     }
     p {
       color: gray;
+      width: 100%;
+      max-width: 300px; /* Restricts text width to the image width */
+      word-wrap: break-word; /* Ensures text breaks properly to fit within the image width */
+      text-align: center;
     }
-    h2 {
-      font-size: 20px;
+    h2, h1 {
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>My Project Showcase</h1>
-    <div class="projects">
-      <div class="project-item">
-        <h2>Mass Spring System</h2>
-        <img src="image/CubeAnime.gif" alt="Mass Spring System GIF">
-        <p>A bouncing jello cube demonstrating collision detection and internal force transmission.</p>
-      </div>
-      <div class="project-item">
-        <h2>Keyframe Interpolation</h2>
-        <img src="image/bq_be_inter.gif" alt="Keyframe Interpolation GIF">
-        <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
-      </div>
-      <div class="project-item">
-        <h2>Kinematics</h2>
-        <img src="image/bq_be_inter.gif" alt="Kinematics GIF">
-        <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
-      </div>
+    <!-- First Column: Computer Animation(OpenGL) -->
+    <div class="project-column">
+      <h1>Computer Animation (OpenGL)</h1>
+
+      <h2>Mass Spring System</h2>
+      <img src="image/CubeAnime.gif" alt="Mass Spring System GIF">
+      <p>A bouncing jello cube demonstrating collision detection and internal force transmission.</p>
+
+      <h2>Keyframe Interpolation</h2>
+      <img src="image/bq_be_inter.gif" alt="Keyframe Interpolation GIF">
+      <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
+
+      <h2>Kinematics</h2>
+      <img src="image/bq_be_inter.gif" alt="Kinematics GIF">
+      <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
     </div>
+
+    <!-- Future project columns can be added below -->
+    <!-- Example structure for another column -->
+    <div class="project-column">
+      <h1>Future Project Category</h1>
+
+      <h2>Project 1</h2>
+      <img src="image/example.gif" alt="Project 1 GIF">
+      <p>Description of the first project in this category.</p>
+
+      <!-- Add more projects in the same format -->
+    </div>
+
   </div>
 </body>
 </html>
+
 
