@@ -22,12 +22,16 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       overflow-x: auto; /* Allows horizontal scrolling if content overflows */
     }
-    .project-column {
+    .project-column, .about-me {
       display: flex;
       flex-direction: column;
       align-items: center;
       min-width: 320px; /* Ensures each column has enough space */
       margin-right: 20px; /* Space between columns */
+      background-color: #f0f0f0; /* Light grey background */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
     }
     img {
       width: 100%;
@@ -44,10 +48,27 @@
     h2, h1 {
       text-align: center;
     }
+    .about-me h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+    .about-me p {
+      text-align: center;
+      color: #333;
+      max-width: 280px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- About Me Section -->
+    <div class="about-me">
+      <h1>Haohan Wang</h1>
+      <p>A computer science master student, gamer, and indie game developer.</p>
+    </div>
+
     <!-- First Column: Computer Animation(OpenGL) -->
     <div class="project-column">
       <h1>Computer Animation (OpenGL)</h1>
@@ -61,7 +82,7 @@
       <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
 
       <h2>Kinematics</h2>
-      <img src="image/FK.gif" alt="Kinematics GIF">
+      <img src="image/bq_be_inter.gif" alt="Kinematics GIF">
       <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
     </div>
 
@@ -79,6 +100,7 @@
   </div>
 </body>
 </html>
+
 
 
 
