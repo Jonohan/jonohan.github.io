@@ -22,7 +22,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       overflow-x: auto; /* Allows horizontal scrolling if content overflows */
     }
-    .project-column, .about-me {
+    .project-column {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -32,6 +32,13 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    }
+    .about-me {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align content to the left */
+      padding: 20px;
+      margin-bottom: 20px;
     }
     img {
       width: 100%;
@@ -65,11 +72,11 @@
       margin-bottom: 10px;
       line-height: 1.5;
       text-transform: uppercase;
+      text-align: left; /* Ensures left alignment for the heading */
     }
     .about-me p {
-      text-align: center;
+      text-align: left;
       color: #333;
-      max-width: 280px;
     }
   </style>
 </head>
@@ -121,6 +128,9 @@
     </div>
 
   </div>
+</body>
+</html>
+
 </body>
 </html>
 
