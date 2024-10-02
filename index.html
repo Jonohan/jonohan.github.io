@@ -11,35 +11,60 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     .container {
-      max-width: 800px;
+      max-width: 100%;
       margin: 50px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    .projects {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+    }
+    .project-item {
+      min-width: 300px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
     img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 300px;
       height: auto;
+    }
+    p {
+      color: gray;
+    }
+    h2 {
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>My Project Showcase</h1>
-    <p>Check out some of my awesome projects below:</p>
-
-    <h2>Mass Spring System</h2>
-    <img src="image/CubeAnime.gif" alt="Project 1 GIF">
-    <p>Description of the project or animation 1.</p>
-
-    <h2>Keyframe Interpolation</h2>
-    <img src="image/bq_be_inter.gif" alt="Project 2 GIF">
-    <p>Description of the project or animation 2.</p>
-
-    <!-- Add more projects as needed -->
+    <div class="projects">
+      <div class="project-item">
+        <h2>Mass Spring System</h2>
+        <img src="image/CubeAnime.gif" alt="Mass Spring System GIF">
+        <p>A bouncing jello cube demonstrating collision detection and internal force transmission.</p>
+      </div>
+      <div class="project-item">
+        <h2>Keyframe Interpolation</h2>
+        <img src="image/bq_be_inter.gif" alt="Keyframe Interpolation GIF">
+        <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
+      </div>
+      <div class="project-item">
+        <h2>Kinematics</h2>
+        <img src="image/bq_be_inter.gif" alt="Kinematics GIF">
+        <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
+
