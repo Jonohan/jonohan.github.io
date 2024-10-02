@@ -38,6 +38,11 @@
       max-width: 300px; /* Ensures images have the same width */
       height: auto;
     }
+    imgWid {
+      width: 100%;
+      max-width: 500px; /* Ensures images have the same width */
+      height: auto;
+    }
     p {
       color: gray;
       width: 100%;
@@ -69,7 +74,22 @@
       <p>A computer science master student, gamer, and indie game developer.</p>
     </div>
 
-    <!-- First Column: Computer Animation(OpenGL) -->
+    <!-- First Column: Indie Game Development -->
+    <div class="project-column">
+      <h1>Indie Game Development</h1>
+
+      <h2>Monster GO</h2>
+      <imgWid src="image/monstergo.gif" alt="monstergo GIF">
+      <p>Strategic Stealth Game: Play a monster and escape!</p>
+
+      <h2>Santa VS Demon</h2>
+      <imgWid src="image/monstergo.gif" alt="monstergo GIF">
+      <p>Two-player Game: Paint the ground, beat your friend!</p>
+
+      <!-- Add more projects in the same format -->
+    </div>
+
+    <!-- Second Column: Computer Animation(OpenGL) -->
     <div class="project-column">
       <h1>Computer Animation (OpenGL)</h1>
 
@@ -82,17 +102,17 @@
       <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
 
       <h2>Kinematics</h2>
-      <img src="image/bq_be_inter.gif" alt="Kinematics GIF">
+      <img src="image/FK.gif" alt="Kinematics GIF">
       <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
     </div>
 
-    <!-- Second Column: Future Project Category -->
+    <!-- Third Column: Game Engine Development -->
     <div class="project-column">
-      <h1>Future Project Category</h1>
+      <h1>Game Engine Development (C++)</h1>
 
-      <h2>Project 1</h2>
-      <img src="image/example.gif" alt="Project 1 GIF">
-      <p>Description of the first project in this category.</p>
+      <h2>Frustum Culling</h2>
+      <img src="image/frustum.gif" alt="frustum GIF">
+      <p>Creating AABB for every instance, and culling those outside the screen</p>
 
       <!-- Add more projects in the same format -->
     </div>
