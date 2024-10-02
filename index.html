@@ -50,6 +50,12 @@
       word-wrap: break-word; /* Ensures text breaks properly to fit within the image width */
       text-align: center;
     }
+    pwid {
+      color: gray;
+      width: 100%;
+      word-wrap: break-word;
+      text-align: center;
+    }
     h2, h1 {
       text-align: center;
     }
@@ -67,12 +73,15 @@
   </style>
 </head>
 <body>
+
+  <div class="about-me">
+    <h1>Haohan Wang</h1>
+    <pwid>A computer science master student,</pwid>
+    <pwid>indie game developer,</pwid>
+    <pwid>and a gamer.</pwid>
+  </div>
   <div class="container">
     <!-- About Me Section -->
-    <div class="about-me">
-      <h1>Haohan Wang</h1>
-      <p>A computer science master student, gamer, and indie game developer.</p>
-    </div>
 
     <!-- First Column: Indie Game Development -->
     <div class="project-column">
@@ -80,11 +89,11 @@
 
       <h2>Monster GO</h2>
       <imgWid src="image/monstergo.gif" alt="monstergo GIF">
-      <p>Strategic Stealth Game: Play a monster and escape!</p>
+      <pwid>Strategic Stealth Game: Play a monster and escape!</pwid>
 
       <h2>Santa VS Demon</h2>
       <imgWid src="image/monstergo.gif" alt="monstergo GIF">
-      <p>Two-player Game: Paint the ground, beat your friend!</p>
+      <pwid>Two-player Game: Paint the ground, beat your friend!</pwid>
 
       <!-- Add more projects in the same format -->
     </div>
