@@ -10,21 +10,24 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      overflow-x: auto;
+      overflow-x: auto; /* Enables horizontal scrolling */
     }
     .container {
+      display: flex; /* Flexbox layout to align columns side by side */
+      flex-direction: row;
       max-width: 100%;
-      margin: 50px auto;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-x: auto; /* Allows horizontal scrolling if content overflows */
     }
     .project-column {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 40px;
+      min-width: 320px; /* Ensures each column has enough space */
+      margin-right: 20px; /* Space between columns */
     }
     img {
       width: 100%;
@@ -62,8 +65,7 @@
       <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
     </div>
 
-    <!-- Future project columns can be added below -->
-    <!-- Example structure for another column -->
+    <!-- Second Column: Future Project Category -->
     <div class="project-column">
       <h1>Future Project Category</h1>
 
