@@ -128,7 +128,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="content">
     <div class="about-me">
       <h1>Haohan Wang</h1>
       <p>A computer science master student,<br>indie game developer,<br>and a gamer.</p>  
@@ -184,9 +184,24 @@
   <div class="scroll-container">
     <div class="scroll-content" id="scrollbar"></div>
   </div>
-</body>
-</html>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const content = document.getElementById("content");
+      const scrollbar = document.getElementById("scrollbar");
+      const scrollContainer = document.querySelector(".scroll-container");
+
+      scrollbar.style.width = content.scrollWidth + "px";
+
+      scrollContainer.addEventListener("scroll", function () {
+        content.scrollLeft = scrollContainer.scrollLeft;
+      });
+
+      content.addEventListener("scroll", function () {
+        scrollContainer.scrollLeft = content.scrollLeft;
+      });
+    });
+  </script>
 </body>
 </html>
 
