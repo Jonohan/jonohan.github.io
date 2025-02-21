@@ -105,62 +105,82 @@
       font-family: 'Times New Roman', Times, serif;
     }
 
+    .scroll-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20px; 
+      overflow-x: auto;
+      overflow-y: auto;
+      white-space: nowrap;
+    }
+    .scroll-content {
+      display: flex;
+      width: max-content;
+      padding-bottom: 20px;
+    }
+
+
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <div class="about-me">
-      <h1>Haohan Wang</h1>
-      <p>A computer science master student,<br>indie game developer,<br>and a gamer.</p>  
+<div class="scroll-container">
+  <div class="scroll-content">
+    <div class="container">
+      <div class="about-me">
+        <h1>Haohan Wang</h1>
+        <p>A computer science master student,<br>indie game developer,<br>and a gamer.</p>  
+      </div>
+      <!-- First Column: Indie Game Development -->
+      <div class="project-column1">
+        <h1>Indie Game Development<br></h1>
+  
+        <h2>Monster GO</h2>
+        <img class="img-wide" src="image/monstergo.gif" alt="Monster GO GIF">
+        <p class="p-wide">Strategic Stealth Game: Play a monster and escape!</p>
+  
+        <h2>Santa VS Demon</h2>
+        <img class="img-wide" src="image/SVSD.gif" alt="SVSD GIF">
+        <p class="p-wide">Two-player Game: Paint the ground, beat your friend!</p>
+      </div>
+  
+      <!-- Second Column: Computer Animation(OpenGL) -->
+      <div class="project-column">
+        <h1>Computer Animation (OpenGL)</h1>
+  
+        <h2>Mass Spring System</h2>
+        <img src="image/CubeAnime.gif" alt="Mass Spring System GIF">
+        <p>A bouncing jello cube demonstrating collision detection and internal force transmission.</p>
+  
+        <h2>Keyframe Interpolation</h2>
+        <img src="image/bq_be_inter.gif" alt="Keyframe Interpolation GIF">
+        <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
+  
+        <h2>Kinematics</h2>
+        <img src="image/FK.gif" alt="Kinematics GIF">
+        <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
+      </div>
+  
+      <!-- Third Column: Game Engine Development -->
+      <div class="project-column">
+        <h1>Game Engine Development (C++)</h1>
+  
+        <h2>Frustum Culling</h2>
+        <img src="image/frustum.gif" alt="Frustum GIF">
+        <p>Creating AABB for every instance, and culling those outside the screen.</p>
+  
+        <h2>Navigation Mesh</h2>
+        <img src="image/Navmesh.gif" alt="Navmesh GIF">
+        <p>NavMesh by A* algorithm, allowing dynamic navigation by following the cursor input.</p>
+  
+        <h2>Decision Tree AI System</h2>
+        <img src="image/DtreeAI.gif" alt="DtreeAI GIF">
+        <p>Enemy AI system with 4 alarm levels using decision tree, combined visual and auditory detection</p>
+      </div>
+  
     </div>
-    <!-- First Column: Indie Game Development -->
-    <div class="project-column1">
-      <h1>Indie Game Development<br></h1>
-
-      <h2>Monster GO</h2>
-      <img class="img-wide" src="image/monstergo.gif" alt="Monster GO GIF">
-      <p class="p-wide">Strategic Stealth Game: Play a monster and escape!</p>
-
-      <h2>Santa VS Demon</h2>
-      <img class="img-wide" src="image/SVSD.gif" alt="SVSD GIF">
-      <p class="p-wide">Two-player Game: Paint the ground, beat your friend!</p>
-    </div>
-
-    <!-- Second Column: Computer Animation(OpenGL) -->
-    <div class="project-column">
-      <h1>Computer Animation (OpenGL)</h1>
-
-      <h2>Mass Spring System</h2>
-      <img src="image/CubeAnime.gif" alt="Mass Spring System GIF">
-      <p>A bouncing jello cube demonstrating collision detection and internal force transmission.</p>
-
-      <h2>Keyframe Interpolation</h2>
-      <img src="image/bq_be_inter.gif" alt="Keyframe Interpolation GIF">
-      <p>Keyframe extraction from motion capture data, interpolated using Bezier quaternions.</p>
-
-      <h2>Kinematics</h2>
-      <img src="image/FK.gif" alt="Kinematics GIF">
-      <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
-    </div>
-
-    <!-- Third Column: Game Engine Development -->
-    <div class="project-column">
-      <h1>Game Engine Development (C++)</h1>
-
-      <h2>Frustum Culling</h2>
-      <img src="image/frustum.gif" alt="Frustum GIF">
-      <p>Creating AABB for every instance, and culling those outside the screen.</p>
-
-      <h2>Navigation Mesh</h2>
-      <img src="image/Navmesh.gif" alt="Navmesh GIF">
-      <p>NavMesh by A* algorithm, allowing dynamic navigation by following the cursor input.</p>
-
-      <h2>Decision Tree AI System</h2>
-      <img src="image/DtreeAI.gif" alt="DtreeAI GIF">
-      <p>Enemy AI system with 4 alarm levels using decision tree, combined visual and auditory detection</p>
-    </div>
-
+   </div>
   </div>
 </body>
 </html>
