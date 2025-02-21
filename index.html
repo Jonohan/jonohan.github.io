@@ -16,13 +16,13 @@
     html, body {
       height: 100%; /* Ensure body takes the full height of the screen */
       margin: 0;
-      overflow-x: auto; /* Allows horizontal scrolling */
+      overflow-x: hidden;
     }
     
     .container {
       display: flex;
       flex-direction: row;
-      width: auto;          /* Auto width, allowing the container to expand with content */
+      width: max-content;
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -110,7 +110,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 20px; /* 只占一个小高度 */
+      height: 20px;
       background: rgba(255, 255, 255, 0.8);
       overflow-x: auto;
       overflow-y: hidden;
@@ -119,7 +119,7 @@
     }
     
     .scroll-content {
-      width: 200%;
+      width: max-content;
       height: 1px;
     }
 
@@ -182,7 +182,7 @@
   </div>
   
   <div class="scroll-container">
-    <div class="scroll-content"></div>
+    <div class="scroll-content" id="scrollbar"></div>
   </div>
 </body>
 </html>
