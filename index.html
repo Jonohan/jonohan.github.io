@@ -16,13 +16,13 @@
     html, body {
       height: 100%; /* Ensure body takes the full height of the screen */
       margin: 0;
-      overflow-x: hidden;
+      overflow-x: auto; /* Allows horizontal scrolling */
     }
     
     .container {
       display: flex;
       flex-direction: row;
-      width: max-content;
+      width: auto;          /* Auto width, allowing the container to expand with content */
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -105,30 +105,11 @@
       font-family: 'Times New Roman', Times, serif;
     }
 
-    .scroll-container {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.8);
-      overflow-x: auto;
-      overflow-y: hidden;
-      white-space: nowrap;
-      z-index: 1000;
-    }
-    
-    .scroll-content {
-      width: max-content;
-      height: 1px;
-    }
-
-
-
   </style>
 </head>
 <body>
-  <div class="container" id="content">
+
+  <div class="container">
     <div class="about-me">
       <h1>Haohan Wang</h1>
       <p>A computer science master student,<br>indie game developer,<br>and a gamer.</p>  
@@ -179,30 +160,8 @@
       <img src="image/DtreeAI.gif" alt="DtreeAI GIF">
       <p>Enemy AI system with 4 alarm levels using decision tree, combined visual and auditory detection</p>
     </div>
+
   </div>
-  
-  <div class="scroll-container">
-    <div class="scroll-content" id="scrollbar"></div>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const content = document.getElementById("content");
-      const scrollbar = document.getElementById("scrollbar");
-      const scrollContainer = document.querySelector(".scroll-container");
-
-      scrollbar.style.width = content.scrollWidth + "px";
-
-      scrollContainer.addEventListener("scroll", function () {
-        content.scrollLeft = scrollContainer.scrollLeft;
-      });
-
-      content.addEventListener("scroll", function () {
-        scrollContainer.scrollLeft = content.scrollLeft;
-      });
-    });
-  </script>
 </body>
 </html>
-
 
