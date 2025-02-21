@@ -10,24 +10,26 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      overflow-x: auto; /* Enables horizontal scrolling */
+      white-space: nowrap;
+      overflow-x: scroll; /* Enables horizontal scrolling */
     }
 
     html, body {
       height: 100%; /* Ensure body takes the full height of the screen */
       margin: 0;
-      overflow-x: auto; /* Allows horizontal scrolling */
+      white-space: nowrap;
+      overflow-x: scroll; /* Allows horizontal scrolling */
     }
     
     .container {
       display: flex;
       flex-direction: row;
-      width: auto;          /* Auto width, allowing the container to expand with content */
+      width: max-content;         /* Auto width, allowing the container to expand with content */
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow-x: auto;      /* Allows horizontal scrolling if content overflows */
+      overflow-x: scroll;     /* Allows horizontal scrolling if content overflows */
     }
 
     .project-column {
