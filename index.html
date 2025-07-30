@@ -1,159 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      overflow-x: scroll;
       white-space: nowrap;
-      overflow-x: scroll; /* Enables horizontal scrolling */
+      color: white;
     }
 
-    html, body {
-      height: 100%; /* Ensure body takes the full height of the screen */
-      margin: 0;
-      white-space: nowrap;
-      overflow-x: scroll; /* Allows horizontal scrolling */
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
     }
-    
+
     .container {
       display: flex;
       flex-direction: row;
-      width: max-content;         /* Auto width, allowing the container to expand with content */
+      width: max-content;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow-x: scroll;     /* Allows horizontal scrolling if content overflows */
+      overflow-x: scroll;
     }
 
-    .project-column {
+    .project-column, .project-column1 {
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: none;
       min-width: 320px;
-      margin-right: 20px; /* Space between columns */
-      background-color: #f0f0f0; /* Light grey background */
+      margin-right: 20px;
+      background-color: rgba(255, 255, 255, 0.08);
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .project-column1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: none;
       min-width: 600px;
-      margin-right: 20px; /* Space between columns */
-      background-color: #f0f0f0; /* Light grey background */
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
     }
+
     .about-me {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align content to the left */
+      align-items: flex-start;
       background-color: rgba(255, 255, 255, 0.03);
       padding: 20px;
       margin-bottom: 20px;
     }
+
     img {
       width: 100%;
-      max-width: 300px; /* Ensures images have the same width */
+      max-width: 300px;
       height: auto;
     }
+
     .img-wide {
       width: 100%;
-      max-width: 600px; /* Sets specific images to a width of 500px */
+      max-width: 600px;
       height: auto;
     }
-    p {
-      color: gray;
+
+    .video-container {
+      position: relative;
       width: 100%;
-      max-width: 350px; /* Restricts text width to the image width */
-      word-wrap: break-word; /* Ensures text breaks properly to fit within the image width */
-      text-align: center;
-      white-space: normal;
+      max-width: 600px;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .p-wide {
-      color: gray;
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      max-width: 500px; /* Text width matches the wider image */
+      height: 100%;
+    }
+
+    p {
+      color: #ccc;
+      width: 100%;
+      max-width: 350px;
       word-wrap: break-word;
       text-align: center;
       white-space: normal;
     }
-    h2, h1 {
-      text-align: center;
+
+    .p-wide {
+      color: #ccc;
+      max-width: 500px;
     }
+
+    h1, h2 {
+      text-align: center;
+      color: white;
+    }
+
     .about-me h1 {
       font-size: 36px;
       width: 280px;
       margin-bottom: 10px;
       line-height: 1.5;
       text-transform: uppercase;
-      text-align: left; 
+      text-align: left;
       font-family: 'Times New Roman', Times, serif;
     }
+
     .about-me p {
       text-align: left;
       width: 250px;
       font-size: 16px;
-      color: #334;
+      color: #ddd;
       font-family: 'Times New Roman', Times, serif;
     }
-
-    .video-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  #tsparticles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-  }
   </style>
-  <!-- tsParticles core -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
-  <!-- Links preset -->
-  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links"></script>
+
+  <!-- tsParticles slim bundle (lightweight version) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
 </head>
-  
-<body>  
+<body>
+
+  <!-- Particle background -->
   <div id="tsparticles"></div>
+
   <div class="container">
     <div class="about-me">
       <h1>Haohan Wang</h1>
       <p>A computer science master student,<br>indie game developer,<br>and a gamer.</p>  
     </div>
-    <!-- First Column: Indie Game Development -->
+
+    <!-- Indie Game Dev -->
     <div class="project-column1">
-      <h1>Indie Game Development<br></h1>
+      <h1>Indie Game Development</h1>
 
       <h2>Myth of Lumi</h2>
       <div class="video-container">
@@ -166,11 +160,11 @@
       <p class="p-wide">Physics-based Turf War Game: Master the cards, win the table!<br>
         <a href="https://store.steampowered.com/app/3518380/Myth_of_Lumi/" target="_blank">Steam Page</a>
       </p>
-      
+
       <h2>Santa VS Demon</h2>
       <img class="img-wide" src="image/SVSD.gif" alt="SVSD GIF">
       <p class="p-wide">Two-player Game: Paint the ground, beat your friend!<br>
-          <a href="https://jonohan.itch.io/santa-vs-demon" target="_blank">itch.io Page</a>
+        <a href="https://jonohan.itch.io/santa-vs-demon" target="_blank">itch.io Page</a>
       </p>
 
       <h2>Monster GO</h2>
@@ -180,7 +174,7 @@
       </p>
     </div>
 
-    <!-- Second Column: Computer Animation(OpenGL) -->
+    <!-- OpenGL Projects -->
     <div class="project-column">
       <h1>Computer Animation (OpenGL)</h1>
 
@@ -197,7 +191,7 @@
       <p>Skeletal binding and skin animation, demonstrating forward and inverse kinematics.</p>
     </div>
 
-    <!-- Third Column: Game Engine Development -->
+    <!-- Engine Dev -->
     <div class="project-column">
       <h1>Game Engine Development (C++)</h1>
 
@@ -213,34 +207,46 @@
       <img src="image/DtreeAI.gif" alt="DtreeAI GIF">
       <p>Enemy AI system with 4 alarm levels based on behaviour tree, combined visual and auditory detection</p>
     </div>
-
   </div>
+
+  <!-- tsParticles Slim Config -->
   <script>
-    (async () => {
-      await loadLinksPreset(tsParticles);
-      await tsParticles.load({
-        id: "tsparticles",
-        options: {
-          preset: "links",
-          background: {
-            color: "#000000" //
-          },
-          particles: {
-            color: {
-              value: "#ffffff" //
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.4,
-              width: 1
-            }
-          }
+    tsParticles.load("tsparticles", {
+      background: {
+        color: "#000"
+      },
+      interactivity: {
+        events: {
+          onClick: { enable: true, mode: "push" },
+          onHover: { enable: true, mode: "repulse" }
+        },
+        modes: {
+          push: { quantity: 6 },
+          repulse: { distance: 100 }
         }
-      });
-    })();
+      },
+      particles: {
+        links: {
+          enable: true,
+          opacity: 0.3,
+          distance: 200,
+          color: "#ffffff"
+        },
+        move: {
+          enable: true,
+          speed: { min: 1, max: 3 }
+        },
+        opacity: {
+          value: { min: 0.3, max: 0.7 }
+        },
+        size: {
+          value: { min: 1, max: 3 }
+        },
+        color: { value: "#ffffff" }
+      }
+    });
   </script>
 </body>
 </html>
+
 
