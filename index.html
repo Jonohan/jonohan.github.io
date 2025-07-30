@@ -15,9 +15,6 @@
       white-space: nowrap;
       color: white;
     }
-
-    /* REMOVED tsparticles styling */
-
     .container {
       display: flex;
       flex-direction: row;
@@ -27,6 +24,8 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       overflow-x: scroll;
+      position: relative;
+      z-index: 1;
     }
 
     .project-column, .project-column1 {
@@ -40,6 +39,8 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
     }
 
     .project-column1 {
@@ -53,6 +54,8 @@
       background-color: rgba(255, 255, 255, 0.03);
       padding: 20px;
       margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     img {
