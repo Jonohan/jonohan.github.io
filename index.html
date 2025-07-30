@@ -109,6 +109,26 @@
       font-family: 'Times New Roman', Times, serif;
     }
 
+    .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
   </style>
 </head>
 <body>
@@ -123,13 +143,13 @@
       <h1>Indie Game Development<br></h1>
 
       <h2>Myth of Lumi</h2>
-      <iframe class="img-wide" width="600" height="900"
-        src="https://www.youtube.com/embed/00mFUB37Bik"
-        title="Myth of Lumi Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/00mFUB37Bik"
+                title="Myth of Lumi Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
       <p class="p-wide">Physics-based Turf War Game: Master the cards, win the table!<br>
         <a href="https://store.steampowered.com/app/3518380/Myth_of_Lumi/" target="_blank">Steam Page</a>
       </p>
