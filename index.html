@@ -90,6 +90,23 @@
     z-index: 1;
   }
 
+  .name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .name-cn {
+    font-size: 70px;
+    color: #fff;
+    font-family: 'FangSong', '仿宋', serif;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    align-items: center; 
+  }
+
+
   img {
     width: 100%;
     max-width: 300px;
@@ -149,13 +166,15 @@
   }
 
   .about-me h1 {
-    font-size: 60px;
+    font-size: 25px;
     width: 280px;
     margin-bottom: 10px;
     line-height: 1.2;
     text-transform: uppercase;
     text-align: left;
     font-family: 'Times New Roman', serif;
+    margin-top: -5px;
+    margin-left: 5px;
   }
 
   .about-me p {
@@ -164,6 +183,14 @@
     font-size: 16px;
     color: #eee;
     font-family: "Lucida Console", Monaco, monospace;
+  }
+   .about-me p1 {
+    text-align: left;
+    width: 280px;
+    font-size: 18px;
+    color: #eee;
+    font-family: 'FangSong', '仿宋', serif;
+     margin-top: 10px;
   }
 
   a {
@@ -186,8 +213,14 @@
 
   <div class="container">
     <div class="about-me">
-      <h1>Haohan<br>Wang</h1>
-      <p>A computer science graduate,<br>indie game developer,<br>and a gamer.</p>  
+      <div class="name-row">
+        <div class="name-cn">王颢涵</div>
+      </div>
+      <div class="name-row">
+        <h1>Haohan Wang</h1>
+      </div>
+      <p><br>A computer science graduate,<br>indie game developer,<br>and a gamer.</p>
+      <p1>知者，行者，玩者。</p1>
     </div>
 
     <!-- Indie Game Dev -->
@@ -292,6 +325,7 @@
   </script>
 </body>
 </html>
+
 
 
 
